@@ -15,8 +15,10 @@ export default function Statistics({ title, stats }) {
               backgroundColor: getRandomHexColor(),
             }}
           >
-            <span className={css.label}>{label}</span>
-            <span className={css.percentage}>{percentage}%</span>
+            <div className={css.blockSpan}>
+              <span className={css.label}>{label}</span>
+              <span className={css.percentage}>{percentage}%</span>
+            </div>
           </li>
         ))}
       </ul>
