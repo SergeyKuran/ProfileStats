@@ -2,34 +2,55 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .statList {
   display: flex;
   gap: 10px;
   padding: 0 10px;
-
   list-style: none;
+  margin-top: 15px;
 }
 
 .item {
   position: relative;
   display: flex;
   justify-content: center;
-
+  align-items: center;
   width: 100px;
   height: 100px;
+  background-color: #fff;
+  border: 1p solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 500ms ease-in-out, box-shadow 500ms ease-in-out,
+    background-color 500ms ease-in-out;
+}
+
+.item:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.blockSpan {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .label {
-  padding-top: 10px;
+  text-align: center;
 }
 
 .percentage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   font-weight: 800;
-
-  transform: translate(-50%, -50%);
 }
