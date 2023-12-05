@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import css from '../statistics/Statistics.module.css';
+import getRandomHexColor from 'helpers/getRandomHexColor';
 
 export default function Statistics({ title, stats }) {
   return (
@@ -24,12 +25,6 @@ export default function Statistics({ title, stats }) {
       </ul>
     </section>
   );
-}
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
 }
 
 Statistics.protoType = {
